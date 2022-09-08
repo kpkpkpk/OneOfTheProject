@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    compileSdk = ConfigData.compileSdkVersion
-    buildToolsVersion = ConfigData.buildToolsVersion
+    compileSdk = 32
+    buildToolsVersion = "30.0.3"
 
     defaultConfig {
         applicationId = "com.kponomarev.oneofthenewproject"
-        minSdk = ConfigData.minSdkVersion
-        targetSdk = ConfigData.targetSdkVersion
-        versionCode = ConfigData.versionCode
-        versionName = ConfigData.versionName
+        minSdk = 24
+        targetSdk = 32
+        versionCode = 1
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,13 +48,11 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
-    implementation(Deps.kotlinJdk8)
-    implementation(Deps.appCompat)
-    implementation(Deps.materialDesign)
-    implementation(Deps.timber)
-    implementation(Deps.constraintLayout)
-    testImplementation(Deps.junit)
-
-
+    implementation(libs.bundles.kotlin)
+    implementation(libs.junit)
+    implementation(libs.android.tools.lint.lint)
+//    play with previous line: type "libs." after that "android" and see at libs.versions.toml
+//    Project -> gradle -> libs.versions.toml
+//    https://github.com/google/accompanist/blob/main/gradle/libs.versions.toml
 
 }

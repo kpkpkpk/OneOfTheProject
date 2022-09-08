@@ -12,7 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     enableFeaturePreview("VERSION_CATALOGS")
-/*
+
     defaultLibrariesExtensionName.set("libs")
     versionCatalogs {
         create("libs") {
@@ -26,14 +26,6 @@ dependencyResolutionManagement {
         }
     }
 
-    in build.gradle.kts (App)
-    implementation(libs.bundles.kotlin)
-    implementation(libs.junit)
-    implementation(libs.android.tools.lint.lint)
- play with previous line: type "libs." after that "android" and see at libs.versions.toml
- Project -> gradle -> libs.versions.toml
- https://github.com/google/accompanist/blob/main/gradle/libs.versions.toml
-    */
 }
 rootProject.name = "OneOfTheNewProject"
 include(":app")

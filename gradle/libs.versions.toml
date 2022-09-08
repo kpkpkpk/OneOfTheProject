@@ -94,3 +94,14 @@ android-tools-lint-api = { module = "com.android.tools.lint:lint-api", version.r
 android-tools-lint-tests = { module = "com.android.tools.lint:lint-tests", version.ref = "lintMinCompose" }
 
 squareup-mockwebserver = "com.squareup.okhttp3:mockwebserver:4.9.3"
+
+[bundles]
+compose = ["compose-ui-ui", "compose-ui-util", "compose-ui-tooling", "compose-ui-tooling-preview", "compose-ui-test-junit4", "compose-ui-test-manifest", "compose-foundation-foundation", "compose-foundation-layout", "compose-material-material", "compose-material-iconsext", "compose-animation-animation"]
+kotlin = ["kotlin-stdlib", "kotlin-stdlibJdk8", "kotlin-gradlePlugin", "kotlin-reflect", "kotlin-metadataJvm"]
+coroutines = ["kotlin-coroutines-android", "kotlin-coroutines-test"]
+coil = ["coil-coil", "coil-gif", "coil-compose"]
+okhttp = ["okhttp-okhttp", "okhttp-mockWebServer"]
+androidx = ["androidx-appcompat", "androidx-core", "androidx-activity-compose", "androidx-fragment", "androidx-dynamicanimation", "androidx-lifecycle-runtime", "androidx-lifecycle-viewmodel-compose", "androidx-window", "androidx-window-testing"]
+androidx_navigation = ["androidx-navigation-compose", "androidx-navigation-testing"]
+androidx_test = ["androidx-test-core", "androidx-test-runner", "androidx-test-rules", "androidx-test-orchestrator", "androidx-test-uiAutomator", "androidx-test-espressoCore", "androidx-test-espressoWeb"]
+tools = ["android-tools-build-gradle", "android-tools-lint-lint", "android-tools-lint-api", "android-tools-lint-tests"]
