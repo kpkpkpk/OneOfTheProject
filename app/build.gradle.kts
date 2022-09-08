@@ -48,9 +48,10 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
-    implementation(libs.bundles.kotlin)
-    implementation(libs.junit)
-    implementation(libs.android.tools.lint.lint)
+    implementation(libs.bundles.all)
+//    implementation(libs.bundles.kotlin)
+//    implementation(libs.junit)
+//    implementation(libs.android.tools.lint.lint)
 //    play with previous line: type "libs." after that "android" and see at libs.versions.toml
 //    Project -> gradle -> libs.versions.toml
 //    https://github.com/google/accompanist/blob/main/gradle/libs.versions.toml
