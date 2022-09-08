@@ -34,23 +34,19 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.3.1"
     }
+    buildFeatures {
+        // Enables Jetpack Compose for this module
+        compose = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.5.0")
     implementation("com.google.android.material:material:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
-    implementation(libs.bundles.all)
-//    implementation(libs.bundles.kotlin)
-//    implementation(libs.junit)
 //    implementation(libs.android.tools.lint.lint)
 //    play with previous line: type "libs." after that "android" and see at libs.versions.toml
 //    Project -> gradle -> libs.versions.toml
