@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk = 32
-    buildToolsVersion = "30.0.3"
+    compileSdk = libs.versions.compileSdk.get().toInt()
+    buildToolsVersion = libs.versions.buildToolsVersion.get()
 
     defaultConfig {
         applicationId = "com.kponomarev.oneofthenewproject"
-        minSdk = 24
-        targetSdk = 32
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
@@ -28,8 +28,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.3.1"
@@ -47,9 +47,5 @@ dependencies {
     implementation("com.google.android.material:material:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-//    implementation(libs.android.tools.lint.lint)
-//    play with previous line: type "libs." after that "android" and see at libs.versions.toml
-//    Project -> gradle -> libs.versions.toml
-//    https://github.com/google/accompanist/blob/main/gradle/libs.versions.toml
 
 }
