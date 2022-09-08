@@ -32,7 +32,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.1"
+        kotlinCompilerExtensionVersion = "1.2.1"
     }
     buildFeatures {
         // Enables Jetpack Compose for this module
