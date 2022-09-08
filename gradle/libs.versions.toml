@@ -4,6 +4,11 @@ compose = "1.2.1"
 composeCompiler = "1.3.1"
 composesnapshot = "-" # a single character = no snapshot
 
+compileSdk = "32"
+targetSdk = "30"
+minSdk = "24"
+buildToolsVersion = "32.1.0-rc1"
+
 # gradlePlugin and lint need to be updated together
 gradlePlugin = "7.3.0-rc01"
 lintMinCompose = "30.0.0"
