@@ -13,8 +13,6 @@ dependencyResolutionManagement {
     }
     enableFeaturePreview("VERSION_CATALOGS")
 
-    defaultLibrariesExtensionName.set("libs")
-
 }
 rootProject.name = "OneOfTheNewProject"
 include(":app")
