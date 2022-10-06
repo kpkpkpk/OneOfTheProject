@@ -92,6 +92,9 @@ squareup-mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", versio
 util-detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 util-detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
 [bundles]
 compose = ["compose-ui-ui", "compose-ui-util", "compose-ui-tooling", "compose-ui-tooling-preview",
     "compose-ui-test-junit4", "compose-ui-test-manifest", "compose-foundation-foundation",
