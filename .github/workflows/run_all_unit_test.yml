@@ -7,16 +7,16 @@ on:
 
 jobs:
   Unit-test:
-  name: Run unit tests on PR in main
-  runs-on: ubuntu-latest
+    name: Run unit tests on PR
+    runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v3
-    - name: Install Java
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Java
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
           java-version: 11
 
-    - name: Run unit tests
-      run: ./gradlew test
+      - name: Run unit tests
+        run: ./gradlew test
