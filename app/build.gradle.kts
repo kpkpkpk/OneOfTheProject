@@ -1,5 +1,8 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("com.android.application")
+    id("kotlin-kapt")
     kotlin("android")
 }
 
@@ -48,6 +51,12 @@ dependencies {
     implementation("com.google.android.material:material:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
+    implementation(libs.dagger.core)
+    kapt(libs.dagger.compiler)
+    testImplementation(libs.bundles.testsBundle)
+    implementation(libs.terrakok.cicerone)
+    implementation(libs.bundles.coil)
+    implementation(libs.bundles.coroutines)
     implementation(libs.bundles.androidx)
-
+    implementation(libs.bundles.okhttpRetrofitBundle)
 }
