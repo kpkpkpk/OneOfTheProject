@@ -39,8 +39,8 @@ android {
         kotlinCompilerExtensionVersion = "1.3.1"
     }
     buildFeatures {
-        // Enables Jetpack Compose for this module
         compose = true
+        viewBinding = true
     }
     kotlinOptions {
         jvmTarget = "11"
@@ -59,4 +59,5 @@ dependencies {
     implementation(libs.bundles.coroutines)
     implementation(libs.bundles.androidx)
     implementation(libs.bundles.okhttpRetrofitBundle)
+    implementation(libs.viewBindingPropertyDelegate)
 }

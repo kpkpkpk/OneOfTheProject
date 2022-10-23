@@ -51,7 +51,7 @@ snapper = "dev.chrisbanes.snapper:snapper:0.2.2"
 
 android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "gradlePlugin" }
 gradleMavenPublishPlugin = "com.vanniktech:gradle-maven-publish-plugin:0.17.0"
-viewBinding-property-delegate = { module = "com.github.kirich1409:viewbindingpropertydelegate", version.ref = "viewBindingDelegate" }
+viewBindingPropertyDelegate = { module = "com.github.kirich1409:viewbindingpropertydelegate", version.ref = "viewBindingDelegate" }
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-metadataJvm = "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0"
