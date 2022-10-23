@@ -1,0 +1,21 @@
+name: PR_unit_tests
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  Unit-test:
+  name: Run unit tests on PR in main
+  runs-on: ubuntu-latest
+
+  steps:
+    - uses: actions/checkout@v3
+    - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 11
+    - name: Run unit tests
+      run: ./gradlew test
