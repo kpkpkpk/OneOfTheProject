@@ -25,14 +25,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-
             }
-
         })
-
     }
 }
