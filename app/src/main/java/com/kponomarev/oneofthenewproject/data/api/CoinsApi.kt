@@ -12,11 +12,5 @@ interface CoinsApi {
     suspend fun getListAllMarkets(
         @Query("vs_currency") vsCurrency: String,
         @Query("ids") ids: String,
-        @Query("category") category: String,
-        @Query("order") order: String,
-        @Query("per_page") perPage: Int,
-        @Query("page") page: Int,
-        @Query("sparkline") sparkline: Boolean,
-        @Query("price_change_percentage") priceChangePercentage: String,
     ): List<CoinMarket>
 }
