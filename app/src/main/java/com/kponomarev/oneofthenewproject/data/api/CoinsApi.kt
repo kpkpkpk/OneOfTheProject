@@ -3,7 +3,6 @@ package com.kponomarev.oneofthenewproject.data.api
 import com.kponomarev.oneofthenewproject.data.model.CoinMarket
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
 interface CoinsApi {
