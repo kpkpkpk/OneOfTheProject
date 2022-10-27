@@ -2,15 +2,22 @@ package com.kponomarev.oneofthenewproject.data.api
 
 import com.kponomarev.oneofthenewproject.data.model.CoinMarket
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.QueryMap
 
 interface CoinsApi {
-    @GET("/coins/list")
+    @GET("coins/list")
     suspend fun getListAllCoins(): List<CoinMarket>
 
-    @GET("/coins/markets")
+    @GET("coins/markets")
     suspend fun getListAllMarkets(
-        @Query("vs_currency") vsCurrency: String,
-        @Query("ids") ids: String,
+        @QueryMap parameters: Map<String, String>,
     ): List<CoinMarket>
+
+    @GET("coins/{id}")
+    suspend fun getCoin(
+        @Path("id") id: String,
+        @QueryMap parameters: Map<String, String>,
+    ): CoinMarket //TODO make another Coin model
 }
