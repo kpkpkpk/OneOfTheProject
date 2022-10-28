@@ -1,8 +1,9 @@
-package com.kponomarev.oneofthenewproject
+package com.kponomarev.oneofthenewproject.feature.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.kponomarev.oneofthenewproject.R
 import com.kponomarev.oneofthenewproject.feature.quotes.ui.container.QutoesFragmentContainer
 import com.kponomarev.oneofthenewproject.databinding.ActivityMainBinding
 
