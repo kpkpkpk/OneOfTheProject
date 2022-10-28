@@ -1,6 +1,7 @@
-package com.kponomarev.oneofthenewproject.data.api
+package com.kponomarev.oneofthenewproject.feature.data.api
 
-import com.kponomarev.oneofthenewproject.data.model.CoinMarket
+import com.kponomarev.oneofthenewproject.feature.data.model.Coin
+import com.kponomarev.oneofthenewproject.feature.data.model.CoinMarket
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.QueryMap
@@ -18,5 +19,5 @@ interface CoinsApi {
     suspend fun getCoin(
         @Path("id") id: String,
         @QueryMap parameters: Map<String, String>,
-    ): CoinMarket //TODO make another Coin model
+    ): Coin
 }
