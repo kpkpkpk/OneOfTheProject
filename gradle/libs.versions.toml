@@ -58,6 +58,7 @@ kotlin-metadataJvm = "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0"
 squareup-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVer" }
 squareup-okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttpVer" }
 squareup-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVer" }
+squareup-retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVer" }
 dagger-core = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 dagger-annotationProcessor = { module = "com.google.dagger:dagger-android-processor", version.ref = "dagger" }
@@ -120,7 +121,8 @@ compose = ["compose-ui-ui", "compose-ui-util", "compose-ui-tooling", "compose-ui
 kotlin = ["kotlin-gradlePlugin", "kotlin-reflect",
     "kotlin-metadataJvm"]
 
-okhttpRetrofitBundle = ["squareup-okhttp", "squareup-okhttp-logging-interceptor", "squareup-retrofit"]
+okhttpRetrofitBundle = ["squareup-okhttp", "squareup-okhttp-logging-interceptor", "squareup-retrofit",
+    "squareup-retrofit-converter-gson"]
 
 coroutines = ["kotlin-coroutines-android", "kotlin-coroutines-test", "kotlin-coroutines-core"]
 coil = ["coil-coil", "coil-gif", "coil-compose"]
