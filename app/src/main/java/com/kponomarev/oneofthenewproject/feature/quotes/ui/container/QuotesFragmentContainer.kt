@@ -9,10 +9,10 @@ import com.kponomarev.oneofthenewproject.R
 
 import com.kponomarev.oneofthenewproject.databinding.FragmentQuotesContainerBinding
 
-class QutoesFragmentContainer : Fragment(R.layout.fragment_quotes_container) {
+class QuotesFragmentContainer : Fragment(R.layout.fragment_quotes_container) {
 
     companion object {
-        fun newInstance() = QutoesFragmentContainer()
+        fun newInstance() = QuotesFragmentContainer()
     }
 
     private val binding: FragmentQuotesContainerBinding by viewBinding()

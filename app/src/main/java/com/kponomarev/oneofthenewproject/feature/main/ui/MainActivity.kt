@@ -1,14 +1,15 @@
-package com.kponomarev.oneofthenewproject.feature.main
+package com.kponomarev.oneofthenewproject.feature.main.ui
 
+import android.os.Bundle
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.kponomarev.oneofthenewproject.MyApplication
 import com.kponomarev.oneofthenewproject.R
-import com.kponomarev.oneofthenewproject.feature.quotes.ui.container.QutoesFragmentContainer
+import com.kponomarev.oneofthenewproject.feature.quotes.ui.container.QuotesFragmentContainer
 import com.kponomarev.oneofthenewproject.databinding.ActivityMainBinding
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityActor
+import com.kponomarev.oneofthenewproject.feature.main.di.MainActivityComponent
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityEffect.NavigateToQuotes
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityReducer
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityStore
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.OnStoreCreated
+import com.kponomarev.oneofthenewproject.utils.fastLazy
 import com.kponomarev.oneofthenewproject.utils.storeHolderPropertyDelegate
 import vivid.money.elmslie.android.base.ElmActivity
 import vivid.money.elmslie.android.storeholder.StoreHolder
@@ -19,9 +20,12 @@ import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityS
 class MainActivity :
     ElmActivity<Event, Effect, State>(R.layout.activity_main) {
 
+    private val component: MainActivityComponent by fastLazy {
+        (application as MyApplication).mainActivityComponent
+    }
+
     override val storeHolder: StoreHolder<Event, Effect, State> by storeHolderPropertyDelegate {
-        //пока нет di делаю так
-        MainActivityStore(State(), MainActivityReducer(), MainActivityActor())
+       component.mainActivityStore
     }
 
     private val binding: ActivityMainBinding by viewBinding()
@@ -31,6 +35,11 @@ class MainActivity :
 
     override fun render(state: State) = Unit
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        component.inject(this)
+        super.onCreate(savedInstanceState)
+    }
+
     override fun handleEffect(effect: Effect) = when (effect) {
         NavigateToQuotes -> {
             navigateToQuotes()
@@ -39,6 +48,6 @@ class MainActivity :
 
     private fun navigateToQuotes() {
         supportFragmentManager.beginTransaction()
-            .add(binding.mainContainer.id, QutoesFragmentContainer.newInstance()).commit()
+            .add(binding.mainContainer.id, QuotesFragmentContainer.newInstance()).commit()
     }
 }
