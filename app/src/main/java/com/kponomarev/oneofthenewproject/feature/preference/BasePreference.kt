@@ -6,4 +6,9 @@ abstract class BasePreference<T>(
     protected val sharedPreferences: SharedPreferences,
     protected val key: String,
     protected val defaultValue: T
-) : Preference<T>
+) : Preference<T>{
+
+    override fun clear() {
+        sharedPreferences.edit().remove(key).apply()
+    }
+}

@@ -1,8 +1,8 @@
-package com.kponomarev.oneofthenewproject.feature.di.modules
+package com.kponomarev.oneofthenewproject.core.di.modules
 
 import android.content.Context
-import com.kponomarev.oneofthenewproject.feature.di.LoginStorage
-import com.kponomarev.oneofthenewproject.feature.di.MainStorage
+import com.kponomarev.oneofthenewproject.core.di.LoginStorage
+import com.kponomarev.oneofthenewproject.core.di.MainStorage
 import com.kponomarev.oneofthenewproject.feature.preference.StringPreference
 import dagger.Module
 import dagger.Provides

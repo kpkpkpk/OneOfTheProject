@@ -1,7 +1,6 @@
-package com.kponomarev.oneofthenewproject.feature.di.component
+package com.kponomarev.oneofthenewproject.core.di.component
 
-import com.kponomarev.oneofthenewproject.feature.di.modules.StorageModule
-import com.kponomarev.oneofthenewproject.feature.login.LoginComponent
+import com.kponomarev.oneofthenewproject.core.di.modules.StorageModule
 import dagger.Component
 import javax.inject.Singleton
 

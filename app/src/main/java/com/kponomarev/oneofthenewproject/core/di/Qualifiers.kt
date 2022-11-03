@@ -1,4 +1,4 @@
-package com.kponomarev.oneofthenewproject.feature.di
+package com.kponomarev.oneofthenewproject.core.di
 
 import javax.inject.Qualifier
 
