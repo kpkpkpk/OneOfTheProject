@@ -6,8 +6,6 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.kponomarev.oneofthenewproject.R
 import com.kponomarev.oneofthenewproject.feature.quotes.ui.container.QuotesFragmentContainer
 import com.kponomarev.oneofthenewproject.databinding.ActivityMainBinding
-import com.kponomarev.oneofthenewproject.feature.di.component.ActivityComponent
-import com.kponomarev.oneofthenewproject.feature.di.component.DaggerActivityComponent
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val binding: ActivityMainBinding by viewBinding()
@@ -17,11 +15,5 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         supportFragmentManager.beginTransaction()
             .add(binding.mainContainer.id, QuotesFragmentContainer.newInstance()).commit()
-
-        val activityComponent: ActivityComponent = DaggerActivityComponent
-            .builder()
-            .build()
-
-        activityComponent.inject(this)
     }
 }

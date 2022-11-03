@@ -7,9 +7,9 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [
-    StorageModule::class,
-    AppSubComponents::class
-])
+    StorageModule::class
+],
+dependencies = [])
 interface AppComponent {
 
     @Component.Builder
