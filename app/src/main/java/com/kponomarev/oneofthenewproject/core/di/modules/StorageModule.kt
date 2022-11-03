@@ -9,6 +9,7 @@ import dagger.Provides
 
 @Module
 class StorageModule {
+
     @Provides
     @LoginStorage
     fun provideLoginStorage(context: Context): StringPreference {

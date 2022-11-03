@@ -1,4 +1,4 @@
-package com.kponomarev.oneofthenewproject.feature.main
+package com.kponomarev.oneofthenewproject.feature.main.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
