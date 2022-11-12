@@ -10,5 +10,6 @@
     <color name="customGray">#393E46</color>
     <color name="customDarkGray">#232931</color>
     <color name="customWhite">#EEEEEE</color>
-    <color name="customLightGray">#6B778D</color>
+    <color name="customLightGray">#1A1A1B</color>
+    <color name="customBlack">#1A1A1B</color>
 </resources>
