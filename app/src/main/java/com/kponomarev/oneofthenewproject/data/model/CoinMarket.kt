@@ -1,29 +1,27 @@
 package com.kponomarev.oneofthenewproject.data.model
 
 import java.util.*
+import com.google.gson.annotations.SerializedName
+import androidx.annotation.Keep
 
+@Keep
 data class CoinMarket(
     val id: String,
     val symbol: String,
     val name: String,
-    val image: String?,
-    val currentPrice: Double?,
-    val marketCap: Double?,
-    val marketCapRank: Int?,
-    val fullyDilutedValuation: Double?,
-    val totalVolume: Double?,
-    val high24h: Double?,
-    val low24h: Double?,
-    val priceChange24h: Double?,
-    val priceChangePercentage24h: Double?,
-    val marketCapChange24h: Double?,
-    val marketCapChangePercentage24h: Double?,
-    val circulatingSupply: Double?,
-    val totalSupply: Double?,
-    val maxSupply: Double?,
-    val ath: Double?,
-    val athChangePercentage: Double?,
-    val atlDate: Date?,
-    val roi: Roi?,
-    val lastUpdated: Date?,
+    val image: String,
+    @SerializedName("current_price")
+    val currentPrice: Double,
+    @SerializedName("market_cap")
+    val marketCap: Double,
+    @SerializedName("market_cap_rank")
+    val marketCapRank: Int,
+    @SerializedName("high_24h")
+    val high24h: Double,
+    @SerializedName("low_24h")
+    val low24h: Double,
+    @SerializedName("price_change_percentage_24h")
+    val priceChangePercentage24h: Double,
+    @SerializedName("last_updated")
+    val lastUpdated: Date,
 )

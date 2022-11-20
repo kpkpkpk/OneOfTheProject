@@ -1,6 +1,6 @@
 package com.kponomarev.oneofthenewproject.feature.main.presentation
 
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityEffect.NavigateToQuotes
+import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.Init
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.OnStoreCreated
 import vivid.money.elmslie.core.store.dsl_reducer.ScreenDslReducer
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityCommand as Command
@@ -18,7 +18,9 @@ class MainActivityReducer : ScreenDslReducer<Event, UiEvent, Event, State, Effec
 
     override fun Result.ui(event: UiEvent) = when (event) {
         OnStoreCreated -> {
-            effects { +NavigateToQuotes }
+        }
+        Init -> {
+            state { state.copy(isLoading = "s") }
         }
     }
 }
