@@ -1,4 +1,4 @@
-package com.kponomarev.oneofthenewproject.feature.data.model
+package com.kponomarev.oneofthenewproject.data.model
 
 import java.util.*
 import com.google.gson.annotations.SerializedName

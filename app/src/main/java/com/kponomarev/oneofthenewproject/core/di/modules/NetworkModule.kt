@@ -1,6 +1,6 @@
 package com.kponomarev.oneofthenewproject.core.di.modules
 
-import com.kponomarev.oneofthenewproject.feature.data.api.CoinsApi
+import com.kponomarev.oneofthenewproject.data.api.CoinsApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

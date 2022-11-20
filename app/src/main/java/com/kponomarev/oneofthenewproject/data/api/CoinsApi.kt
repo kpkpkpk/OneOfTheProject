@@ -1,7 +1,7 @@
-package com.kponomarev.oneofthenewproject.feature.data.api
+package com.kponomarev.oneofthenewproject.data.api
 
-import com.kponomarev.oneofthenewproject.feature.data.model.Coin
-import com.kponomarev.oneofthenewproject.feature.data.model.CoinMarket
+import com.kponomarev.oneofthenewproject.data.model.Coin
+import com.kponomarev.oneofthenewproject.data.model.CoinMarket
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.QueryMap

@@ -1,4 +1,4 @@
-package com.kponomarev.oneofthenewproject.feature.data.model
+package com.kponomarev.oneofthenewproject.data.model
 
 import androidx.annotation.Keep
 
