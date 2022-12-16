@@ -8,6 +8,7 @@ import com.kponomarev.oneofthenewproject.R
 
 import com.kponomarev.oneofthenewproject.databinding.FragmentQuotesContainerBinding
 
+@Suppress("UnusedPrivateMember")
 class CoinsListFragment : Fragment(R.layout.fragment_quotes_container) {
 
     companion object {
@@ -18,6 +19,5 @@ class CoinsListFragment : Fragment(R.layout.fragment_quotes_container) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
     }
 }
