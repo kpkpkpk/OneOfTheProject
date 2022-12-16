@@ -10,6 +10,8 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
     buildToolsVersion = libs.versions.buildToolsVersion.get()
 
+    namespace = "com.kponomarev.oneofthenewproject"
+
     defaultConfig {
         applicationId = "com.kponomarev.oneofthenewproject"
         minSdk = libs.versions.minSdk.get().toInt()
