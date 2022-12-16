@@ -4,15 +4,15 @@ import android.app.Application
 import com.kponomarev.oneofthenewproject.core.di.component.AppComponent
 import com.kponomarev.oneofthenewproject.core.di.component.DaggerAppComponent
 import com.kponomarev.oneofthenewproject.feature.main.di.DaggerMainActivityComponent
+import com.kponomarev.oneofthenewproject.feature.main.di.MainActivityComponent
 
 class MyApplication : Application() {
 
-    val appComponent: AppComponent by lazy {
+    private val appComponent: AppComponent by lazy {
         DaggerAppComponent.builder().build()
     }
 
-    val mainActivityComponent by lazy {
-        // todo вынести создание стора в компонент, который переживет жц - VM
+    val mainActivityComponent: MainActivityComponent by lazy {
         DaggerMainActivityComponent.builder()
             .mainActivityDependencies(appComponent)
             .build()

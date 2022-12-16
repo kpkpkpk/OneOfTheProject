@@ -15,5 +15,4 @@ interface AppComponent : MainActivityDependencies {
         fun build(): AppComponent
     }
 
-    fun inject(activity: MainActivity)
 }

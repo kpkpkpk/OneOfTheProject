@@ -24,6 +24,8 @@ cicerone = "7.1"
 dagger = "2.44"
 retrofitVer = "2.9.0"
 okhttpVer = "4.10.0"
+faceboookShimmersVersion = "0.5.0"
+tiRecyclerVersion = "2.0.0"
 
 androidxtest = "1.4.0"
 kaspressoVer = "1.4.0"
@@ -63,6 +65,9 @@ squareup-retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-
 dagger-core = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 dagger-annotationProcessor = { module = "com.google.dagger:dagger-android-processor", version.ref = "dagger" }
+
+facebook-shimmers = { module = "com.facebook.shimmer:shimmer", version.ref = "faceboookShimmersVersion" }
+tinkoff-coroutineRecycler = { module = "ru.tinkoff.mobile:ti-recycler-coroutines",version.ref="tiRecyclerVersion" }
 
 kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlin-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }

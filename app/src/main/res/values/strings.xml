@@ -5,4 +5,5 @@
     <string name="first">First</string>
     <string name="second">Second</string>
     <string name="third">third</string>
+    <string name="error_view_title">Не получилось загрузить</string>
 </resources>
