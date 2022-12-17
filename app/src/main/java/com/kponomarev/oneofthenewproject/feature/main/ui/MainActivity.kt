@@ -4,7 +4,7 @@ import android.os.Bundle
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.kponomarev.oneofthenewproject.MyApplication
 import com.kponomarev.oneofthenewproject.R
-import com.kponomarev.oneofthenewproject.feature.quotes.ui.container.QuotesFragmentContainer
+import com.kponomarev.oneofthenewproject.feature.coins_list.ui.CoinsListFragment
 import com.kponomarev.oneofthenewproject.databinding.ActivityMainBinding
 import com.kponomarev.oneofthenewproject.feature.main.di.MainActivityComponent
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityEffect.NavigateToQuotes
@@ -48,6 +48,6 @@ class MainActivity :
 
     private fun navigateToQuotes() {
         supportFragmentManager.beginTransaction()
-            .add(binding.mainContainer.id, QuotesFragmentContainer.newInstance()).commit()
+            .add(binding.mainContainer.id, CoinsListFragment.newInstance()).commit()
     }
 }
