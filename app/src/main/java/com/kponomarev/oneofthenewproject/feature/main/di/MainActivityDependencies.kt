@@ -1,7 +1,7 @@
 package com.kponomarev.oneofthenewproject.feature.main.di
 
-import com.kponomarev.oneofthenewproject.data.api.CoinsApi
+import com.kponomarev.oneofthenewproject.data.api.ConsumetApi
 
 interface MainActivityDependencies {
-    val coinsApi: CoinsApi
+    val consumetApi: ConsumetApi
 }

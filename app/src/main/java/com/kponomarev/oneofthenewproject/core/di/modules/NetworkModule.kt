@@ -1,6 +1,6 @@
 package com.kponomarev.oneofthenewproject.core.di.modules
 
-import com.kponomarev.oneofthenewproject.data.api.CoinsApi
+import com.kponomarev.oneofthenewproject.data.api.ConsumetApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -13,7 +13,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideCoinsApi(): CoinsApi {
+    fun provideCoinsApi(): ConsumetApi {
         return Retrofit.Builder()
             .baseUrl("https://api.coingecko.com/api/v3/")
             .addConverterFactory(GsonConverterFactory.create())
