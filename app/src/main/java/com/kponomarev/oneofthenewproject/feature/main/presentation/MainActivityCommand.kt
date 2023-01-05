@@ -1,3 +1,5 @@
 package com.kponomarev.oneofthenewproject.feature.main.presentation
 
-sealed class MainActivityCommand
+sealed class MainActivityCommand {
+    object NavigateToAnimeList : MainActivityCommand()
+}

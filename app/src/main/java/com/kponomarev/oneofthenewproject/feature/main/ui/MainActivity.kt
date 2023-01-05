@@ -1,14 +1,11 @@
 package com.kponomarev.oneofthenewproject.feature.main.ui
 
 import android.os.Bundle
-import by.kirich1409.viewbindingdelegate.viewBinding
 import com.kponomarev.oneofthenewproject.MyApplication
 import com.kponomarev.oneofthenewproject.R
-import com.kponomarev.oneofthenewproject.feature.coins_list.ui.CoinsListFragment
-import com.kponomarev.oneofthenewproject.databinding.ActivityMainBinding
+import com.kponomarev.oneofthenewproject.core.navigation.Navigator
 import com.kponomarev.oneofthenewproject.feature.main.di.MainActivityComponent
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityEffect.NavigateToQuotes
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.OnStoreCreated
+import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.LaunchAnimeListScreen
 import com.kponomarev.oneofthenewproject.utils.fastLazy
 import com.kponomarev.oneofthenewproject.utils.storeHolderPropertyDelegate
 import vivid.money.elmslie.android.base.ElmActivity
@@ -17,21 +14,19 @@ import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityE
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityEvent as Event
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityState as State
 
-class MainActivity :
-    ElmActivity<Event, Effect, State>(R.layout.activity_main) {
+class MainActivity : ElmActivity<Event, Effect, State>(R.layout.activity_main) {
 
     private val component: MainActivityComponent by fastLazy {
         (application as MyApplication).mainActivityComponent
     }
 
     override val storeHolder: StoreHolder<Event, Effect, State> by storeHolderPropertyDelegate {
-       component.mainActivityStore
+        component.mainActivityStore
     }
 
-    private val binding: ActivityMainBinding by viewBinding()
+    private val navigator by fastLazy { Navigator(this, R.id.mainContainer) }
 
-    override val initEvent: Event
-        get() = OnStoreCreated
+    override val initEvent: Event = LaunchAnimeListScreen
 
     override fun render(state: State) = Unit
 
@@ -40,14 +35,13 @@ class MainActivity :
         super.onCreate(savedInstanceState)
     }
 
-    override fun handleEffect(effect: Effect) = when (effect) {
-        NavigateToQuotes -> {
-            navigateToQuotes()
-        }
+    override fun onResumeFragments() {
+        super.onResumeFragments()
+        component.navigatorHolder.setNavigator(navigator)
     }
 
-    private fun navigateToQuotes() {
-        supportFragmentManager.beginTransaction()
-            .add(binding.mainContainer.id, CoinsListFragment.newInstance()).commit()
+    override fun onPause() {
+        component.navigatorHolder.removeNavigator()
+        super.onPause()
     }
 }
