@@ -1,7 +1,8 @@
 package com.kponomarev.oneofthenewproject.feature.main.presentation
 
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.Init
-import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.OnStoreCreated
+import com.github.terrakok.cicerone.Router
+import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent.LaunchAnimeListScreen
+import com.kponomarev.oneofthenewproject.feature.screens.Screens.AnimeList
 import vivid.money.elmslie.core.store.dsl_reducer.ScreenDslReducer
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityCommand as Command
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityEffect as Effect
@@ -9,7 +10,9 @@ import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityE
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityState as State
 import com.kponomarev.oneofthenewproject.feature.main.presentation.MainActivityUiEvent as UiEvent
 
-class MainActivityReducer : ScreenDslReducer<Event, UiEvent, Event, State, Effect, Command>(
+class MainActivityReducer(
+    private val router: Router
+) : ScreenDslReducer<Event, UiEvent, Event, State, Effect, Command>(
     UiEvent::class,
     Event::class
 ) {
@@ -17,10 +20,6 @@ class MainActivityReducer : ScreenDslReducer<Event, UiEvent, Event, State, Effec
     override fun Result.internal(event: Event) = Unit
 
     override fun Result.ui(event: UiEvent) = when (event) {
-        OnStoreCreated -> {
-        }
-        Init -> {
-            state { state.copy(isLoading = "s") }
-        }
+        LaunchAnimeListScreen -> router.navigateTo(AnimeList())
     }
 }
