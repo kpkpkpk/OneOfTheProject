@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pokemonIcon"
+            android:layout_width="100dp"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:id="@+id/pokemonName"
+            app:layout_constraintTop_toBottomOf="@id/pokemonIcon"
+            app:layout_constraintLeft_toLeftOf="@id/pokemonIcon"
+            app:layout_constraintRight_toRightOf="@id/pokemonIcon"
+            android:layout_marginTop="10dp"
+            tools:text="Pikachu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_marginTop="10dp"
+            android:id="@+id/chipGroup"
+            app:layout_constraintTop_toBottomOf="@id/pokemonName"
+            app:layout_constraintLeft_toLeftOf="@id/pokemonName"
+            app:layout_constraintRight_toRightOf="@id/pokemonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                tools:text="Fire"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:textAlignment="center"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                tools:text="Earth"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:textAlignment="center"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.chip.ChipGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
