@@ -55,6 +55,7 @@ dependencies {
 
     implementation(libs.dagger.core)
     kapt(libs.dagger.compiler)
+    kapt(libs.androidx.lifecycle.lifecycle.compiler)
     testImplementation(libs.bundles.testsBundle)
     implementation(libs.terrakok.cicerone)
     implementation(libs.bundles.coil)
