@@ -25,8 +25,6 @@ dagger = "2.44"
 retrofitVer = "2.9.0"
 okhttpVer = "4.10.0"
 faceboookShimmersVersion = "0.5.0"
-tiRecyclerVersion = "2.0.0"
-
 androidxtest = "1.4.0"
 kaspressoVer = "1.4.0"
 kakao = "1.4.32"
@@ -35,7 +33,6 @@ roboletric = "4.8"
 mockWebServer = "4.9.3"
 androidxnavigation = "2.5.0-rc02"
 androidxWindow = "1.0.0"
-vividElmslie = "2.1.0"
 
 [libraries]
 compose-ui-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
@@ -67,7 +64,6 @@ dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = 
 dagger-annotationProcessor = { module = "com.google.dagger:dagger-android-processor", version.ref = "dagger" }
 
 facebook-shimmers = { module = "com.facebook.shimmer:shimmer", version.ref = "faceboookShimmersVersion" }
-tinkoff-coroutineRecycler = { module = "ru.tinkoff.mobile:ti-recycler-coroutines",version.ref="tiRecyclerVersion" }
 
 kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlin-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
@@ -78,11 +74,6 @@ okhttp-mockWebServer = { module = "com.squareup.okhttp3:mockwebserver", version.
 coil-coil = { module = "io.coil-kt:coil", version.ref = "coil" }
 coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
-
-elmslie-android = { module = "com.github.vivid-money.elmslie:elmslie-android", version.ref = "vividElmslie" }
-elmslie-core = { module = "com.github.vivid-money.elmslie:elmslie-core", version.ref = "vividElmslie" }
-elmslie-rxJava2 = { module = "com.github.vivid-money.elmslie:elmslie-rxjava-2", version.ref = "vividElmslie" }
-elmslie-coroutines = { module = "com.github.vivid-money.elmslie:elmslie-coroutines", version.ref = "vividElmslie" }
 
 androidx-appcompat = "androidx.appcompat:appcompat:1.5.0"
 androidx-core = "androidx.core:core-ktx:1.8.0"

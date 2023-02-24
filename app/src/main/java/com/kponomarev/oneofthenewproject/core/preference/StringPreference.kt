@@ -1,4 +1,4 @@
-package com.kponomarev.oneofthenewproject.feature.preference
+package com.kponomarev.oneofthenewproject.core.preference
 
 import android.content.SharedPreferences
 import javax.inject.Inject

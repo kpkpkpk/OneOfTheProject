@@ -62,9 +62,5 @@ dependencies {
     implementation(libs.bundles.androidx)
     implementation(libs.bundles.okhttpRetrofitBundle)
     implementation(libs.viewBindingPropertyDelegate)
-    implementation(libs.elmslie.core)
-    implementation(libs.elmslie.android)
     implementation(libs.facebook.shimmers)
-    implementation(libs.tinkoff.coroutineRecycler)
-    implementation(libs.elmslie.coroutines)
 }

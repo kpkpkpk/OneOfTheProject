@@ -1,4 +1,4 @@
-package com.kponomarev.oneofthenewproject.feature.preference
+package com.kponomarev.oneofthenewproject.core.preference
 
 interface Preference<T> {
     fun set(key: String, value: T)
